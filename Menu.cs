@@ -14,5 +14,10 @@ namespace TheComfortZone
         {
             InitializeComponent();
         }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
