@@ -1,0 +1,7 @@
+Item|Code|Stock Left|Color|Price|Discount
+Casual Sandal|30112|10|Black|45|20
+Casual Sandal|30114|8|Brown|50|20
+Ankle Boot|50123|14|Brown|180|30
+Ballet Flats|12360|20|Black|20|10
+Heels|12370|10|Nude|50|15
+Sneakers|12380|9|30|20
