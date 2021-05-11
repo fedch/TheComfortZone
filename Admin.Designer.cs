@@ -33,11 +33,11 @@ namespace TheComfortZone
             this.Item = new System.Windows.Forms.ColumnHeader();
             this.Code = new System.Windows.Forms.ColumnHeader();
             this.StockLeft = new System.Windows.Forms.ColumnHeader();
+            this.Colour = new System.Windows.Forms.ColumnHeader();
             this.Price = new System.Windows.Forms.ColumnHeader();
             this.Discount = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Colour = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // listView1
@@ -52,7 +52,7 @@ namespace TheComfortZone
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(539, 95);
+            this.listView1.Size = new System.Drawing.Size(555, 213);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -72,6 +72,12 @@ namespace TheComfortZone
             // 
             this.StockLeft.Text = "Stock Left ";
             this.StockLeft.Width = 80;
+            // 
+            // Colour
+            // 
+            this.Colour.DisplayIndex = 5;
+            this.Colour.Text = "Colour";
+            this.Colour.Width = 80;
             // 
             // Price
             // 
@@ -103,17 +109,11 @@ namespace TheComfortZone
             this.button2.Text = "Close and Save";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Colour
-            // 
-            this.Colour.DisplayIndex = 5;
-            this.Colour.Text = "Colour";
-            this.Colour.Width = 80;
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 400);
+            this.ClientSize = new System.Drawing.Size(584, 400);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);

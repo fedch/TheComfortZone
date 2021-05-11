@@ -58,7 +58,9 @@ namespace TheComfortZone
 
                 lvItem.SubItems.Add(item.code);
                 lvItem.SubItems.Add(item.stockLeft.ToString());
+                lvItem.SubItems.Add(item.color);
                 lvItem.SubItems.Add("$"+item.price.ToString());
+                lvItem.SubItems.Add(item.discount.ToString() + "%");
 
                 listView1.Items.Add(lvItem);
 
