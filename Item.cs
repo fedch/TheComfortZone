@@ -7,20 +7,25 @@ namespace TheComfortZone
     class Item
     {
         //atributes 
-        public string productName;
-        public string code;
+        public string productName { get; set; }
+        public string code { get; set; }
         public int stockLeft;
-        public int color;
+        public string color;
         public decimal price;
         public decimal discount;
 
 
         //constructor 
 
-        public Item(string producName, string code)
+        public Item(string productName, string code, int stockleft , string color, decimal price, decimal discount)
         {
-            this.productName = producName;
+            this.productName = productName;
             this.code = code;
+            this.stockLeft = stockleft;
+            this.color = color;
+            this.price = price;
+            this.discount = discount; 
+
 
 
         }

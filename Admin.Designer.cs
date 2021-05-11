@@ -30,18 +30,60 @@ namespace TheComfortZone
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.Item = new System.Windows.Forms.ColumnHeader();
+            this.Code = new System.Windows.Forms.ColumnHeader();
+            this.StockLeft = new System.Windows.Forms.ColumnHeader();
+            this.Price = new System.Windows.Forms.ColumnHeader();
+            this.Discount = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Colour = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Item,
+            this.Code,
+            this.StockLeft,
+            this.Colour,
+            this.Price,
+            this.Discount});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(516, 278);
+            this.listView1.Size = new System.Drawing.Size(539, 95);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Item
+            // 
+            this.Item.Tag = "Item";
+            this.Item.Text = "Product Name ";
+            this.Item.Width = 150;
+            // 
+            // Code
+            // 
+            this.Code.Text = "Code";
+            this.Code.Width = 80;
+            // 
+            // StockLeft
+            // 
+            this.StockLeft.Text = "Stock Left ";
+            this.StockLeft.Width = 80;
+            // 
+            // Price
+            // 
+            this.Price.DisplayIndex = 3;
+            this.Price.Text = "Price";
+            this.Price.Width = 80;
+            // 
+            // Discount
+            // 
+            this.Discount.DisplayIndex = 4;
+            this.Discount.Text = "Discount";
+            this.Discount.Width = 80;
             // 
             // button1
             // 
@@ -60,6 +102,12 @@ namespace TheComfortZone
             this.button2.TabIndex = 2;
             this.button2.Text = "Close and Save";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Colour
+            // 
+            this.Colour.DisplayIndex = 5;
+            this.Colour.Text = "Colour";
+            this.Colour.Width = 80;
             // 
             // Admin
             // 
@@ -81,6 +129,12 @@ namespace TheComfortZone
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ColumnHeader Item;
+        private System.Windows.Forms.ColumnHeader Code;
+        private System.Windows.Forms.ColumnHeader StockLeft;
+        private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.ColumnHeader Discount;
+        private System.Windows.Forms.ColumnHeader Colour;
     }
 }
 

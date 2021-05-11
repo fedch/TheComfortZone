@@ -7,19 +7,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace TheComfortZone
 {
     public partial class Admin : Form
     {
+        List<Item> ListItems = new List<Item>();
+
         public Admin()
         {
-            InitializeComponent();
-        }
 
+            InitializeComponent();
+            using (StreamReader streamReader = new StreamReader(@"Items1.txt"))
+            {
+
+                string line = string.Empty;
+                string[] tempArray = new string[100];
+                line = streamReader.ReadLine();
+
+                //Initialize the List of items
+               
+
+
+                //Loop for reading the file 
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    tempArray = line.Split('|');
+
+                    //Adding items into the different lists
+                    ListItems.Add(new Item(tempArray[0],tempArray[1],int.Parse(tempArray[2]),tempArray[3],decimal.Parse(tempArray[4]),decimal.Parse(tempArray[5])));
+
+                }
+
+            }
+
+            LoadList();
+        }
         private void Admin_Load(object sender, EventArgs e)
         {
 
         }
+
+        public void LoadList()
+        {
+            foreach (Item item in ListItems)
+            {
+                ListViewItem lvItem = new ListViewItem(item.productName);
+
+                lvItem.SubItems.Add(item.code);
+                lvItem.SubItems.Add(item.stockLeft.ToString());
+                lvItem.SubItems.Add("$"+item.price.ToString());
+
+                listView1.Items.Add(lvItem);
+
+            }
+        }
+
+       
     }
 }
