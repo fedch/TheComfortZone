@@ -14,35 +14,14 @@ namespace TheComfortZone
 {
     public partial class Admin : Form
     {
-        List<Item> ListItems = new List<Item>();
+
+        List<Item> ListItems = Program.ListItems;
 
         public Admin()
         {
 
             InitializeComponent();
-            using (StreamReader streamReader = new StreamReader(@"Items1.txt"))
-            {
-
-                string line = string.Empty;
-                string[] tempArray = new string[100];
-                line = streamReader.ReadLine();
-
-                //Initialize the List of items
-               
-
-
-                //Loop for reading the file 
-                while ((line = streamReader.ReadLine()) != null)
-                {
-                    tempArray = line.Split('|');
-
-                    //Adding items into the different lists
-                    ListItems.Add(new Item(tempArray[0],tempArray[1],int.Parse(tempArray[2]),tempArray[3],decimal.Parse(tempArray[4]),decimal.Parse(tempArray[5])));
-
-                }
-
-            }
-
+           
             LoadList();
         }
         private void Admin_Load(object sender, EventArgs e)
@@ -67,6 +46,5 @@ namespace TheComfortZone
             }
         }
 
-       
     }
 }

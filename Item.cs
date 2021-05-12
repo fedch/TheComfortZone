@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TheComfortZone
 {
-    class Item
+    public class Item
     {
         //atributes 
         public string productName { get; set; }
@@ -35,7 +35,6 @@ namespace TheComfortZone
 
 
 
-        //read , edit and save the txt file 
 
     }
 }
