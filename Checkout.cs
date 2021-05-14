@@ -10,9 +10,16 @@ namespace TheComfortZone
 {
     public partial class Checkout : Form
     {
+        public static string productID;
+
         public Checkout()
         {
             InitializeComponent();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            productID = txtBxProdID.Text;
         }
     }
 }
