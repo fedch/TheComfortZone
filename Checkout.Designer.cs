@@ -36,7 +36,6 @@ namespace TheComfortZone
             this.btnSearch = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.comboBoxAmount = new System.Windows.Forms.ComboBox();
             this.lblProdNm = new System.Windows.Forms.Label();
             this.lblProdNameAct = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
@@ -48,6 +47,10 @@ namespace TheComfortZone
             this.lblPrice1 = new System.Windows.Forms.Label();
             this.txtBoxPrice = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
+            this.tbAftDisc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nuUpDownAmount = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nuUpDownAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProdID
@@ -112,14 +115,6 @@ namespace TheComfortZone
             this.lblAmount.TabIndex = 6;
             this.lblAmount.Text = "Amount:";
             // 
-            // comboBoxAmount
-            // 
-            this.comboBoxAmount.FormattingEnabled = true;
-            this.comboBoxAmount.Location = new System.Drawing.Point(166, 208);
-            this.comboBoxAmount.Name = "comboBoxAmount";
-            this.comboBoxAmount.Size = new System.Drawing.Size(193, 33);
-            this.comboBoxAmount.TabIndex = 7;
-            // 
             // lblProdNm
             // 
             this.lblProdNm.AutoSize = true;
@@ -141,7 +136,7 @@ namespace TheComfortZone
             // lblDiscount
             // 
             this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(40, 271);
+            this.lblDiscount.Location = new System.Drawing.Point(40, 313);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(86, 25);
             this.lblDiscount.TabIndex = 10;
@@ -150,9 +145,9 @@ namespace TheComfortZone
             // comboBoxDiscount
             // 
             this.comboBoxDiscount.FormattingEnabled = true;
-            this.comboBoxDiscount.Location = new System.Drawing.Point(166, 263);
+            this.comboBoxDiscount.Location = new System.Drawing.Point(213, 310);
             this.comboBoxDiscount.Name = "comboBoxDiscount";
-            this.comboBoxDiscount.Size = new System.Drawing.Size(193, 33);
+            this.comboBoxDiscount.Size = new System.Drawing.Size(146, 33);
             this.comboBoxDiscount.TabIndex = 11;
             // 
             // btnTax
@@ -194,7 +189,7 @@ namespace TheComfortZone
             // lblPrice1
             // 
             this.lblPrice1.AutoSize = true;
-            this.lblPrice1.Location = new System.Drawing.Point(40, 322);
+            this.lblPrice1.Location = new System.Drawing.Point(40, 262);
             this.lblPrice1.Name = "lblPrice1";
             this.lblPrice1.Size = new System.Drawing.Size(120, 25);
             this.lblPrice1.TabIndex = 17;
@@ -202,9 +197,9 @@ namespace TheComfortZone
             // 
             // txtBoxPrice
             // 
-            this.txtBoxPrice.Location = new System.Drawing.Point(166, 316);
+            this.txtBoxPrice.Location = new System.Drawing.Point(213, 262);
             this.txtBoxPrice.Name = "txtBoxPrice";
-            this.txtBoxPrice.Size = new System.Drawing.Size(193, 31);
+            this.txtBoxPrice.Size = new System.Drawing.Size(146, 31);
             this.txtBoxPrice.TabIndex = 19;
             // 
             // btnReset
@@ -216,11 +211,37 @@ namespace TheComfortZone
             this.btnReset.Text = "Reset the Form";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
+            // tbAftDisc
+            // 
+            this.tbAftDisc.Location = new System.Drawing.Point(214, 358);
+            this.tbAftDisc.Name = "tbAftDisc";
+            this.tbAftDisc.Size = new System.Drawing.Size(145, 31);
+            this.tbAftDisc.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 361);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Price after discount:";
+            // 
+            // nuUpDownAmount
+            // 
+            this.nuUpDownAmount.Location = new System.Drawing.Point(213, 211);
+            this.nuUpDownAmount.Name = "nuUpDownAmount";
+            this.nuUpDownAmount.Size = new System.Drawing.Size(146, 31);
+            this.nuUpDownAmount.TabIndex = 23;
+            // 
             // Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nuUpDownAmount);
+            this.Controls.Add(this.tbAftDisc);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.txtBoxPrice);
             this.Controls.Add(this.lblPrice1);
@@ -232,7 +253,6 @@ namespace TheComfortZone
             this.Controls.Add(this.lblDiscount);
             this.Controls.Add(this.lblProdNameAct);
             this.Controls.Add(this.lblProdNm);
-            this.Controls.Add(this.comboBoxAmount);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSearch);
@@ -242,6 +262,7 @@ namespace TheComfortZone
             this.Controls.Add(this.lblProdID);
             this.Name = "Checkout";
             this.Text = "Checkout";
+            ((System.ComponentModel.ISupportInitialize)(this.nuUpDownAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +277,6 @@ namespace TheComfortZone
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.ComboBox comboBoxAmount;
         private System.Windows.Forms.Label lblProdNm;
         private System.Windows.Forms.Label lblProdNameAct;
         private System.Windows.Forms.Label lblDiscount;
@@ -268,5 +288,8 @@ namespace TheComfortZone
         private System.Windows.Forms.Label lblPrice1;
         private System.Windows.Forms.TextBox txtBoxPrice;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.TextBox tbAftDisc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nuUpDownAmount;
     }
 }

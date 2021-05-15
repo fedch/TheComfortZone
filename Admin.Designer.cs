@@ -58,9 +58,10 @@ namespace TheComfortZone
             this.Price,
             this.Discount});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
+            this.listView1.Location = new System.Drawing.Point(17, 20);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(555, 213);
+            this.listView1.Size = new System.Drawing.Size(791, 352);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -101,18 +102,20 @@ namespace TheComfortZone
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(460, 449);
+            this.button1.Location = new System.Drawing.Point(657, 748);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.Size = new System.Drawing.Size(153, 38);
             this.button1.TabIndex = 1;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(460, 487);
+            this.button2.Location = new System.Drawing.Point(657, 812);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
+            this.button2.Size = new System.Drawing.Size(153, 38);
             this.button2.TabIndex = 2;
             this.button2.Text = "Close and Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -129,7 +132,8 @@ namespace TheComfortZone
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 243);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 405);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.52577F));
@@ -138,16 +142,17 @@ namespace TheComfortZone
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.49484F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.49484F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.49484F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(442, 267);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 445);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 15);
+            this.label1.Location = new System.Drawing.Point(130, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Code : ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,9 +161,10 @@ namespace TheComfortZone
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 60);
+            this.label2.Location = new System.Drawing.Point(58, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 15);
+            this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Name : ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -167,9 +173,10 @@ namespace TheComfortZone
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 104);
+            this.label3.Location = new System.Drawing.Point(95, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Stock Left : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -178,9 +185,10 @@ namespace TheComfortZone
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 148);
+            this.label4.Location = new System.Drawing.Point(135, 247);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.Size = new System.Drawing.Size(63, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Price : ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -189,9 +197,10 @@ namespace TheComfortZone
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 192);
+            this.label5.Location = new System.Drawing.Point(102, 320);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 15);
+            this.label5.Size = new System.Drawing.Size(96, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Discount : ";
             // 
@@ -199,21 +208,23 @@ namespace TheComfortZone
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(87, 237);
+            this.label6.Location = new System.Drawing.Point(119, 394);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(79, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Colour : ";
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 523);
+            this.ClientSize = new System.Drawing.Size(834, 872);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Admin";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Admin_Load);
