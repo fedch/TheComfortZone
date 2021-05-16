@@ -36,39 +36,46 @@ namespace TheComfortZone
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 94);
+            this.button1.Location = new System.Drawing.Point(49, 125);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 51);
+            this.button1.Size = new System.Drawing.Size(280, 68);
             this.button1.TabIndex = 0;
             this.button1.Text = "Admin Activities";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 184);
+            this.button2.Location = new System.Drawing.Point(49, 245);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(245, 51);
+            this.button2.Size = new System.Drawing.Size(280, 68);
             this.button2.TabIndex = 1;
             this.button2.Text = "Checkout Process";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(43, 273);
+            this.button3.Location = new System.Drawing.Point(49, 370);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(245, 56);
+            this.button3.Size = new System.Drawing.Size(280, 68);
             this.button3.TabIndex = 2;
-            this.button3.Text = "User";
+            this.button3.Text = "User Login";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 415);
+            this.ClientSize = new System.Drawing.Size(379, 483);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.menu_Load);

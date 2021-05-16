@@ -4,7 +4,8 @@ using System.Text;
 
 namespace TheComfortZone
 {
-    class SalesStaffUser
+    public class SalesClass
     {
+
     }
 }

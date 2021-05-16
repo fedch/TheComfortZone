@@ -15,29 +15,39 @@ namespace TheComfortZone
         {
             InitializeComponent();
         }
+
         
-        List <string> users= new List<string>();
-        List<string> passwords = new List<string>();
-        private void login_Load(object sender, EventArgs e)
+        public static string a, b;
+        public void login_Load(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("users.txt");
-            string line = "";
-            while ((line = sr.ReadLine())!=null) {
-                string[] components = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                users.Add(components[0]);
-                passwords.Add(components[1]);
-            }
+           
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            if (users.Contains(textBox1.Text) && passwords.Contains(textBox2.Text) && Array.IndexOf(users.ToArray(), textBox1.Text) == Array.IndexOf(passwords.ToArray(), textBox2.Text)){
-                menu m = new menu();
-                m.ShowDialog();
+            UserClass U = new UserClass();
+            U.getdata();
+            a = tbUserId.Text;
+            b = tbUserPass.Text;
+            if (a == U.saleslogin && b == U.salespass || a == U.adminlogin && b == U.adminpass)
+            {
+
+                menu W = new menu();
+
+                W.Show();
+            }
+            else if (a == "" || b == "")
+            {
+                MessageBox.Show("User id or password is missing");
 
             }
-            else
-                MessageBox.Show("The username and/or password is incorrect");
+            else if (a != U.saleslogin || b != U.salespass)
+            {
+                MessageBox.Show("Invalid ID or Password");
+
+            }
         }
     }
 }
+

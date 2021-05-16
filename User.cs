@@ -1,29 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Windows.Forms;
 
 namespace TheComfortZone
 {
     //This is the class for all the users, admin and sales staff would be heritance? 
-    public class User
+    public class UserClass 
     {
-        //login
-        //password
-        public string username;
-        public string password;
-        //constructor
-        public User(string username, string password)
+        public string adminlogin, adminpass, saleslogin, salespass;
+        public void getdata()
         {
-            this.username = username;
-            this.password = password;
+            
+        TextReader tr;
+
+            using (tr = new StreamReader(@"users.txt"))
+            {
+                adminlogin = tr.ReadLine();
+                adminpass = tr.ReadLine();
+                saleslogin = tr.ReadLine();
+                salespass = tr.ReadLine();
+            }
         }
-
-        //methods
-
-
-
+       
     }
 
 
 
 }
+
+    
+
+
+
+
