@@ -60,7 +60,7 @@ namespace TheComfortZone
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(555, 213);
+            this.listView1.Size = new System.Drawing.Size(555, 189);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -101,18 +101,18 @@ namespace TheComfortZone
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(460, 449);
+            this.button1.Location = new System.Drawing.Point(460, 287);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.Size = new System.Drawing.Size(107, 63);
             this.button1.TabIndex = 1;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(460, 487);
+            this.button2.Location = new System.Drawing.Point(460, 374);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
+            this.button2.Size = new System.Drawing.Size(107, 64);
             this.button2.TabIndex = 2;
             this.button2.Text = "Close and Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@ namespace TheComfortZone
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 243);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 207);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.52577F));
@@ -209,7 +209,7 @@ namespace TheComfortZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 523);
+            this.ClientSize = new System.Drawing.Size(584, 486);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
