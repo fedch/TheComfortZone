@@ -34,12 +34,11 @@ namespace TheComfortZone
             this.lBoxIDs = new System.Windows.Forms.ListBox();
             this.lBoxAmounts = new System.Windows.Forms.ListBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnToCart = new System.Windows.Forms.Button();
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblProdNm = new System.Windows.Forms.Label();
             this.lblProdNameAct = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
-            this.comboBoxDiscount = new System.Windows.Forms.ComboBox();
             this.btnTax = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.lblTotal1 = new System.Windows.Forms.Label();
@@ -50,6 +49,12 @@ namespace TheComfortZone
             this.tbAftDisc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nuUpDownAmount = new System.Windows.Forms.NumericUpDown();
+            this.tBDiscount = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nuUpDownAmount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,18 +78,18 @@ namespace TheComfortZone
             // 
             this.lBoxIDs.FormattingEnabled = true;
             this.lBoxIDs.ItemHeight = 25;
-            this.lBoxIDs.Location = new System.Drawing.Point(390, 42);
+            this.lBoxIDs.Location = new System.Drawing.Point(390, 55);
             this.lBoxIDs.Name = "lBoxIDs";
-            this.lBoxIDs.Size = new System.Drawing.Size(180, 254);
+            this.lBoxIDs.Size = new System.Drawing.Size(180, 229);
             this.lBoxIDs.TabIndex = 2;
             // 
             // lBoxAmounts
             // 
             this.lBoxAmounts.FormattingEnabled = true;
             this.lBoxAmounts.ItemHeight = 25;
-            this.lBoxAmounts.Location = new System.Drawing.Point(597, 42);
+            this.lBoxAmounts.Location = new System.Drawing.Point(597, 55);
             this.lBoxAmounts.Name = "lBoxAmounts";
-            this.lBoxAmounts.Size = new System.Drawing.Size(180, 254);
+            this.lBoxAmounts.Size = new System.Drawing.Size(180, 229);
             this.lBoxAmounts.TabIndex = 3;
             // 
             // btnSearch
@@ -97,15 +102,15 @@ namespace TheComfortZone
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // button2
+            // btnToCart
             // 
-            this.button2.Location = new System.Drawing.Point(40, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(319, 34);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Add to Cart";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnToCart.Location = new System.Drawing.Point(40, 408);
+            this.btnToCart.Name = "btnToCart";
+            this.btnToCart.Size = new System.Drawing.Size(319, 34);
+            this.btnToCart.TabIndex = 5;
+            this.btnToCart.Text = "Add to Cart";
+            this.btnToCart.UseVisualStyleBackColor = true;
+            this.btnToCart.Click += new System.EventHandler(this.btnToCart_Click);
             // 
             // lblAmount
             // 
@@ -143,14 +148,6 @@ namespace TheComfortZone
             this.lblDiscount.TabIndex = 10;
             this.lblDiscount.Text = "Discount:";
             // 
-            // comboBoxDiscount
-            // 
-            this.comboBoxDiscount.FormattingEnabled = true;
-            this.comboBoxDiscount.Location = new System.Drawing.Point(213, 310);
-            this.comboBoxDiscount.Name = "comboBoxDiscount";
-            this.comboBoxDiscount.Size = new System.Drawing.Size(146, 33);
-            this.comboBoxDiscount.TabIndex = 11;
-            // 
             // btnTax
             // 
             this.btnTax.Location = new System.Drawing.Point(597, 313);
@@ -159,6 +156,7 @@ namespace TheComfortZone
             this.btnTax.TabIndex = 12;
             this.btnTax.Text = "Tax Invoice";
             this.btnTax.UseVisualStyleBackColor = true;
+            this.btnTax.Click += new System.EventHandler(this.btnTax_Click);
             // 
             // btnPayment
             // 
@@ -168,6 +166,7 @@ namespace TheComfortZone
             this.btnPayment.TabIndex = 13;
             this.btnPayment.Text = "Payment";
             this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // lblTotal1
             // 
@@ -214,7 +213,7 @@ namespace TheComfortZone
             // 
             // tbAftDisc
             // 
-            this.tbAftDisc.Location = new System.Drawing.Point(214, 358);
+            this.tbAftDisc.Location = new System.Drawing.Point(214, 364);
             this.tbAftDisc.Name = "tbAftDisc";
             this.tbAftDisc.Size = new System.Drawing.Size(145, 31);
             this.tbAftDisc.TabIndex = 22;
@@ -235,11 +234,63 @@ namespace TheComfortZone
             this.nuUpDownAmount.Size = new System.Drawing.Size(146, 31);
             this.nuUpDownAmount.TabIndex = 23;
             // 
+            // tBDiscount
+            // 
+            this.tBDiscount.Location = new System.Drawing.Point(213, 313);
+            this.tBDiscount.Name = "tBDiscount";
+            this.tBDiscount.Size = new System.Drawing.Size(146, 31);
+            this.tBDiscount.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(-2660, 321);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(507, 31);
+            this.textBox3.TabIndex = 26;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(-2316, 618);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(1398, 31);
+            this.textBox5.TabIndex = 28;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(-2117, 590);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(318, 31);
+            this.textBox6.TabIndex = 29;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(390, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 25);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "IDs";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(597, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 25);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Qty";
+            // 
             // Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(830, 497);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tBDiscount);
             this.Controls.Add(this.nuUpDownAmount);
             this.Controls.Add(this.tbAftDisc);
             this.Controls.Add(this.label1);
@@ -250,12 +301,11 @@ namespace TheComfortZone
             this.Controls.Add(this.lblTotal1);
             this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.btnTax);
-            this.Controls.Add(this.comboBoxDiscount);
             this.Controls.Add(this.lblDiscount);
             this.Controls.Add(this.lblProdNameAct);
             this.Controls.Add(this.lblProdNm);
             this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnToCart);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lBoxAmounts);
             this.Controls.Add(this.lBoxIDs);
@@ -276,12 +326,11 @@ namespace TheComfortZone
         private System.Windows.Forms.ListBox lBoxIDs;
         private System.Windows.Forms.ListBox lBoxAmounts;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnToCart;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label lblProdNm;
         private System.Windows.Forms.Label lblProdNameAct;
         private System.Windows.Forms.Label lblDiscount;
-        private System.Windows.Forms.ComboBox comboBoxDiscount;
         private System.Windows.Forms.Button btnTax;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Label lblTotal1;
@@ -292,5 +341,11 @@ namespace TheComfortZone
         private System.Windows.Forms.TextBox tbAftDisc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown nuUpDownAmount;
+        private System.Windows.Forms.TextBox tBDiscount;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
