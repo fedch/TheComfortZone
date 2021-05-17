@@ -39,8 +39,7 @@ namespace TheComfortZone
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new login());
-            Application.Run(new Checkout());
-            Application.Run(new Admin());
+            
 
             
             

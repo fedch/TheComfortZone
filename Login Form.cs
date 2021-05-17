@@ -30,11 +30,17 @@ namespace TheComfortZone
             U.getdata();
             a = tbUserId.Text;
             b = tbUserPass.Text;
-            if (a == U.saleslogin && b == U.salespass || a == U.adminlogin && b == U.adminpass)
+            if (a == U.adminlogin && b == U.adminpass)
             {
 
                 menu W = new menu();
-
+                MessageBox.Show("Welcome Admin!");
+                W.Show();
+            }
+            else if (a == U.saleslogin && b == U.salespass)
+            {
+                menu W = new menu();
+                MessageBox.Show("Welcome Salesman!");
                 W.Show();
             }
             else if (a == "" || b == "")

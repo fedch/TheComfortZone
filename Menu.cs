@@ -46,14 +46,10 @@ namespace TheComfortZone
 
                     f2.Show();
                 }
-                else if (login.a == "" || login.b == "")
-                {
-                    MessageBox.Show("User id or password is missing");
-
-                }
+                
                 else if (login.a != U.adminlogin || login.b != U.adminpass)
                 {
-                    MessageBox.Show("Invalid ID or Password");
+                    MessageBox.Show("Access Denied.");
 
                 }
             }
@@ -72,16 +68,7 @@ namespace TheComfortZone
 
                     f3.Show();
                 }
-                else if (login.a == "" || login.b == "")
-                {
-                    MessageBox.Show("User id or password is missing");
-
-                }
-                else if (login.a != U.saleslogin || login.b != U.salespass)
-                {
-                    MessageBox.Show("Invalid ID or Password");
-
-                }
+                
             }
         }
         private void button3_Click(object sender, EventArgs e)
