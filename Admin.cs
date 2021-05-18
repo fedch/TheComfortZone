@@ -23,6 +23,7 @@ namespace TheComfortZone
             InitializeComponent();
            
             LoadList();
+            
         }
         private void Admin_Load(object sender, EventArgs e)
         {
@@ -44,6 +45,30 @@ namespace TheComfortZone
                 listView1.Items.Add(lvItem);
 
             }
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            string code = textBoxCode.Text;
+            tableLayoutPanel1.Enabled = true;
+
+            MessageBox.Show("The number of items has to be grater than 0");
+
+            bool exiss = ListItems.Any(y => y.code == code);
+
+
+            if (exiss)
+            {
+
+            }
+            Item item = ListItems.Find(x => x.code.StartsWith(code));
+           
+
+            labelName.Text = item.productName;
+            textBoxSlefkt.Text = item.stockLeft.ToString();
+            textBoxPrice.Text = item.price.ToString();
+            textBoxDiscount.Text = item.discount.ToString();
+            labelColour.Text = item.color;
         }
     }
 }
