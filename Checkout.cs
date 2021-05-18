@@ -15,6 +15,7 @@ namespace TheComfortZone
         public static List<int> chosenItemsAmount = new List<int>();
         public static List<decimal> chosenItemsegularPrices = new List<decimal>();
         public static List<decimal> chosenItemsDiscountedPrices = new List<decimal>();
+        public static List<decimal> discounts = new List<decimal>();
         public static decimal chosenItemsTotalPrice = 0;
 
         List<Item> ListItems = Program.ListItems;
@@ -58,8 +59,9 @@ namespace TheComfortZone
             // Save chosen amounts in a new list:
             chosenItemsAmount.Add(Convert.ToInt32(nuUpDownAmount.Value));
             // Save prices in a new list:
-            chosenItemsegularPrices.Add(Convert.ToDecimal(txtBoxPrice.Text));
+            chosenItemsegularPrices.Add(decimal.Parse(txtBoxPrice.Text, System.Globalization.NumberStyles.Currency));
             chosenItemsDiscountedPrices.Add(discountedPrice);
+            discounts.Add(decimal.Parse(tBDiscount.Text.Replace("%", "")));
 
             // Store total in a variable, increase with every product added:
             chosenItemsTotalPrice += nuUpDownAmount.Value * discountedPrice;
@@ -67,15 +69,35 @@ namespace TheComfortZone
             lblTotal2.Text = chosenItemsTotalPrice.ToString();            
         }
 
-        private void btnTax_Click(object sender, EventArgs e)
+        private void btnPayment_Click(object sender, EventArgs e)
         {
             Invoice formInvoice = new Invoice();
             formInvoice.Show();
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
+            // Reset all fields in the checkout form to null or zero:
+            txtBxProdID.Text = "";
+            lblProdNameAct.Text = "";
+            nuUpDownAmount.Value = 0;
+            txtBoxPrice.Text = "";
+            tBDiscount.Text = "";
+            tbAftDisc.Text = "";
 
+            for (int n = lBoxIDs.Items.Count - 1; n >= 0; --n)
+            {
+                lBoxIDs.Items.RemoveAt(n);
+            }
+
+            for (int n = lBoxAmounts.Items.Count - 1; n >= 0; --n)
+            {
+                lBoxAmounts.Items.RemoveAt(n);
+            }
+
+            lblTotal2.Text = "";
+
+            Invoice formInvoice = new Invoice(); // FIX, ADD WAYS TO RESET THE INVOICE FORM AS WELL
         }
     }
 }

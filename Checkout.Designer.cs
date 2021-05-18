@@ -39,7 +39,6 @@ namespace TheComfortZone
             this.lblProdNm = new System.Windows.Forms.Label();
             this.lblProdNameAct = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
-            this.btnTax = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.lblTotal1 = new System.Windows.Forms.Label();
             this.lblTotal2 = new System.Windows.Forms.Label();
@@ -148,23 +147,13 @@ namespace TheComfortZone
             this.lblDiscount.TabIndex = 10;
             this.lblDiscount.Text = "Discount:";
             // 
-            // btnTax
-            // 
-            this.btnTax.Location = new System.Drawing.Point(597, 313);
-            this.btnTax.Name = "btnTax";
-            this.btnTax.Size = new System.Drawing.Size(180, 34);
-            this.btnTax.TabIndex = 12;
-            this.btnTax.Text = "Tax Invoice";
-            this.btnTax.UseVisualStyleBackColor = true;
-            this.btnTax.Click += new System.EventHandler(this.btnTax_Click);
-            // 
             // btnPayment
             // 
             this.btnPayment.Location = new System.Drawing.Point(390, 361);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(387, 34);
             this.btnPayment.TabIndex = 13;
-            this.btnPayment.Text = "Payment";
+            this.btnPayment.Text = "Payment Confirmed";
             this.btnPayment.UseVisualStyleBackColor = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
@@ -210,6 +199,7 @@ namespace TheComfortZone
             this.btnReset.TabIndex = 20;
             this.btnReset.Text = "Reset the Form";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // tbAftDisc
             // 
@@ -300,7 +290,6 @@ namespace TheComfortZone
             this.Controls.Add(this.lblTotal2);
             this.Controls.Add(this.lblTotal1);
             this.Controls.Add(this.btnPayment);
-            this.Controls.Add(this.btnTax);
             this.Controls.Add(this.lblDiscount);
             this.Controls.Add(this.lblProdNameAct);
             this.Controls.Add(this.lblProdNm);
@@ -331,7 +320,6 @@ namespace TheComfortZone
         private System.Windows.Forms.Label lblProdNm;
         private System.Windows.Forms.Label lblProdNameAct;
         private System.Windows.Forms.Label lblDiscount;
-        private System.Windows.Forms.Button btnTax;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Label lblTotal1;
         private System.Windows.Forms.Label lblTotal2;

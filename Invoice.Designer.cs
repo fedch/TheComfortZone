@@ -38,12 +38,21 @@ namespace TheComfortZone
             this.lbQty = new System.Windows.Forms.ListBox();
             this.lbPrice = new System.Windows.Forms.ListBox();
             this.lbTotal = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.lblQty = new System.Windows.Forms.Label();
+            this.lblPice = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblBalDue = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.lbDiscount = new System.Windows.Forms.ListBox();
+            this.lblDicount = new System.Windows.Forms.Label();
+            this.lblSubTotal = new System.Windows.Forms.Label();
+            this.lblTotalGST = new System.Windows.Forms.Label();
+            this.lblFinalTotal = new System.Windows.Forms.Label();
+            this.lblSubTotalNum = new System.Windows.Forms.Label();
+            this.lblGSTNum = new System.Windows.Forms.Label();
+            this.lblTotalFinalNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -124,44 +133,44 @@ namespace TheComfortZone
             this.lbTotal.ItemHeight = 25;
             this.lbTotal.Location = new System.Drawing.Point(603, 186);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(180, 129);
+            this.lbTotal.Size = new System.Drawing.Size(92, 129);
             this.lbTotal.TabIndex = 8;
             // 
-            // label4
+            // lblProduct
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 25);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Product";
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Location = new System.Drawing.Point(51, 148);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(74, 25);
+            this.lblProduct.TabIndex = 9;
+            this.lblProduct.Text = "Product";
             // 
-            // label5
+            // lblQty
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Qty";
+            this.lblQty.AutoSize = true;
+            this.lblQty.Location = new System.Drawing.Point(299, 148);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(41, 25);
+            this.lblQty.TabIndex = 10;
+            this.lblQty.Text = "Qty";
             // 
-            // label6
+            // lblPice
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(406, 148);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Price";
+            this.lblPice.AutoSize = true;
+            this.lblPice.Location = new System.Drawing.Point(406, 148);
+            this.lblPice.Name = "lblPice";
+            this.lblPice.Size = new System.Drawing.Size(49, 25);
+            this.lblPice.TabIndex = 11;
+            this.lblPice.Text = "Price";
             // 
-            // label7
+            // lblTotal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(603, 148);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 25);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Total";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(603, 148);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(49, 25);
+            this.lblTotal.TabIndex = 12;
+            this.lblTotal.Text = "Total";
             // 
             // label8
             // 
@@ -172,26 +181,117 @@ namespace TheComfortZone
             this.label8.TabIndex = 13;
             this.label8.Text = "Total Balance Due";
             // 
-            // label9
+            // lblBalDue
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(603, 347);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 25);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "label4";
+            this.lblBalDue.AutoSize = true;
+            this.lblBalDue.Location = new System.Drawing.Point(660, 347);
+            this.lblBalDue.Name = "lblBalDue";
+            this.lblBalDue.Size = new System.Drawing.Size(52, 25);
+            this.lblBalDue.TabIndex = 14;
+            this.lblBalDue.Text = "none";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(548, 451);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(246, 59);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lbDiscount
+            // 
+            this.lbDiscount.FormattingEnabled = true;
+            this.lbDiscount.ItemHeight = 25;
+            this.lbDiscount.Location = new System.Drawing.Point(702, 186);
+            this.lbDiscount.Name = "lbDiscount";
+            this.lbDiscount.Size = new System.Drawing.Size(92, 129);
+            this.lbDiscount.TabIndex = 16;
+            // 
+            // lblDicount
+            // 
+            this.lblDicount.AutoSize = true;
+            this.lblDicount.Location = new System.Drawing.Point(702, 148);
+            this.lblDicount.Name = "lblDicount";
+            this.lblDicount.Size = new System.Drawing.Size(82, 25);
+            this.lblDicount.TabIndex = 17;
+            this.lblDicount.Text = "Dicsount";
+            // 
+            // lblSubTotal
+            // 
+            this.lblSubTotal.AutoSize = true;
+            this.lblSubTotal.Location = new System.Drawing.Point(93, 387);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(85, 25);
+            this.lblSubTotal.TabIndex = 18;
+            this.lblSubTotal.Text = "Sub Total";
+            // 
+            // lblTotalGST
+            // 
+            this.lblTotalGST.AutoSize = true;
+            this.lblTotalGST.Location = new System.Drawing.Point(93, 412);
+            this.lblTotalGST.Name = "lblTotalGST";
+            this.lblTotalGST.Size = new System.Drawing.Size(140, 25);
+            this.lblTotalGST.TabIndex = 19;
+            this.lblTotalGST.Text = "Total GST (15%) ";
+            // 
+            // lblFinalTotal
+            // 
+            this.lblFinalTotal.AutoSize = true;
+            this.lblFinalTotal.Location = new System.Drawing.Point(93, 437);
+            this.lblFinalTotal.Name = "lblFinalTotal";
+            this.lblFinalTotal.Size = new System.Drawing.Size(49, 25);
+            this.lblFinalTotal.TabIndex = 20;
+            this.lblFinalTotal.Text = "Total";
+            // 
+            // lblSubTotalNum
+            // 
+            this.lblSubTotalNum.AutoSize = true;
+            this.lblSubTotalNum.Location = new System.Drawing.Point(364, 387);
+            this.lblSubTotalNum.Name = "lblSubTotalNum";
+            this.lblSubTotalNum.Size = new System.Drawing.Size(52, 25);
+            this.lblSubTotalNum.TabIndex = 21;
+            this.lblSubTotalNum.Text = "none";
+            // 
+            // lblGSTNum
+            // 
+            this.lblGSTNum.AutoSize = true;
+            this.lblGSTNum.Location = new System.Drawing.Point(364, 412);
+            this.lblGSTNum.Name = "lblGSTNum";
+            this.lblGSTNum.Size = new System.Drawing.Size(52, 25);
+            this.lblGSTNum.TabIndex = 22;
+            this.lblGSTNum.Text = "none";
+            // 
+            // lblTotalFinalNum
+            // 
+            this.lblTotalFinalNum.AutoSize = true;
+            this.lblTotalFinalNum.Location = new System.Drawing.Point(364, 437);
+            this.lblTotalFinalNum.Name = "lblTotalFinalNum";
+            this.lblTotalFinalNum.Size = new System.Drawing.Size(52, 25);
+            this.lblTotalFinalNum.TabIndex = 23;
+            this.lblTotalFinalNum.Text = "none";
             // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2983, 1590);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(848, 522);
+            this.Controls.Add(this.lblTotalFinalNum);
+            this.Controls.Add(this.lblGSTNum);
+            this.Controls.Add(this.lblSubTotalNum);
+            this.Controls.Add(this.lblFinalTotal);
+            this.Controls.Add(this.lblTotalGST);
+            this.Controls.Add(this.lblSubTotal);
+            this.Controls.Add(this.lblDicount);
+            this.Controls.Add(this.lbDiscount);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.lblBalDue);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.lblPice);
+            this.Controls.Add(this.lblQty);
+            this.Controls.Add(this.lblProduct);
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lbQty);
@@ -220,11 +320,20 @@ namespace TheComfortZone
         private System.Windows.Forms.ListBox lbQty;
         private System.Windows.Forms.ListBox lbPrice;
         private System.Windows.Forms.ListBox lbTotal;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblProduct;
+        private System.Windows.Forms.Label lblQty;
+        private System.Windows.Forms.Label lblPice;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblBalDue;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ListBox lbDiscount;
+        private System.Windows.Forms.Label lblDicount;
+        private System.Windows.Forms.Label lblSubTotal;
+        private System.Windows.Forms.Label lblTotalGST;
+        private System.Windows.Forms.Label lblFinalTotal;
+        private System.Windows.Forms.Label lblSubTotalNum;
+        private System.Windows.Forms.Label lblGSTNum;
+        private System.Windows.Forms.Label lblTotalFinalNum;
     }
 }
