@@ -28,7 +28,7 @@ namespace TheComfortZone
                 lbQty.Items.Add(Checkout.chosenItemsAmount[i]);
                 lbPrice.Items.Add("$" + Checkout.chosenItemsegularPrices[i]);
                 lbTotal.Items.Add("$" + Checkout.chosenItemsegularPrices[i] * Checkout.chosenItemsAmount[i]);
-                lbDiscount.Items.Add("-$" + ((Checkout.chosenItemsegularPrices[i] * Checkout.discounts[i]) / 100));
+                lbDiscount.Items.Add("-$" + ((Checkout.chosenItemsegularPrices[i] * Checkout.discounts[i]) / 100)* Checkout.chosenItemsAmount[i]);
             }
 
             // Display total, with and without GST:
