@@ -1,4 +1,4 @@
 admin
-password1
+admin
 sales
-password2
+sales
