@@ -14,15 +14,15 @@ namespace TheComfortZone
 {
     public partial class Admin : Form
     {
+        List<Item> items1;
 
-        List<Item> ListItems = Program.ListItems;
-
-        public Admin()
+        public Admin(List<Item> items)
         {
 
+            
+            items1 = items;
             InitializeComponent();
-           
-            LoadList();
+            LoadList(items1);
             
         }
         private void Admin_Load(object sender, EventArgs e)
@@ -30,9 +30,9 @@ namespace TheComfortZone
 
         }
 
-        public void LoadList()
+        public void LoadList(List<Item> items)
         {
-            foreach (Item item in ListItems)
+            foreach (Item item in items)
             {
                 ListViewItem lvItem = new ListViewItem(item.productName);
 
@@ -52,16 +52,16 @@ namespace TheComfortZone
             string code = textBoxCode.Text;
             tableLayoutPanel1.Enabled = true;
 
-            MessageBox.Show("The number of items has to be grater than 0");
 
-            bool exiss = ListItems.Any(y => y.code == code);
+            bool exiss = items1.Any(y => y.code == code);
 
 
-            if (exiss)
+            if (! exiss)
             {
+                MessageBox.Show("The number of items has to be grater than 0");
 
             }
-            Item item = ListItems.Find(x => x.code.StartsWith(code));
+            Item item = items1.Find(x => x.code.StartsWith(code));
            
 
             labelName.Text = item.productName;
@@ -69,6 +69,21 @@ namespace TheComfortZone
             textBoxPrice.Text = item.price.ToString();
             textBoxDiscount.Text = item.discount.ToString();
             labelColour.Text = item.color;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string code = textBoxCode.Text;
+            Item item = items1.Find(x => x.code.StartsWith(code));
+            int position = items1.IndexOf(item);
+            item.price = decimal.Parse( textBoxPrice.Text);
+            item.stockLeft = int.Parse(textBoxSlefkt.Text);
+            item.discount = decimal.Parse(textBoxDiscount.Text);
+
+            
+
+
+
         }
     }
 }

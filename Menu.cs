@@ -13,13 +13,32 @@ namespace TheComfortZone
     
     public partial class menu : Form
     {
-        
 
-        
+
+
+        public List<Item> ListItemsFinal = new List<Item>();
 
         public menu()
         {
             InitializeComponent();
+            using (StreamReader streamReader = new StreamReader(@"Items1.txt"))
+            {
+
+                string line = string.Empty;
+                string[] tempArray = new string[100];
+                line = streamReader.ReadLine();
+
+                //Initialize the List of items
+
+                //Loop for reading the file 
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    tempArray = line.Split('|');
+
+                    //Adding items into the different lists
+                    ListItemsFinal.Add(new Item(tempArray[0], tempArray[1], int.Parse(tempArray[2]), tempArray[3], decimal.Parse(tempArray[4]), decimal.Parse(tempArray[5])));
+                }
+            }
         }
 
         
@@ -44,7 +63,7 @@ namespace TheComfortZone
                 if (login.a == U.adminlogin && login.b == U.adminpass)
                 {
 
-                    Admin f2 = new Admin();
+                    Admin f2 = new Admin(ListItemsFinal);
 
                     f2.Show();
                 }
