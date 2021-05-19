@@ -7,7 +7,7 @@ namespace TheComfortZone
     {
         public Invoice()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void Invoice_Load(object sender, EventArgs e)
@@ -23,7 +23,7 @@ namespace TheComfortZone
                 lbQty.Items.Add(Checkout.chosenItemsAmount[i]);
                 lbPrice.Items.Add("$" + Checkout.chosenItemsegularPrices[i]);
                 lbTotal.Items.Add("$" + Checkout.chosenItemsegularPrices[i] * Checkout.chosenItemsAmount[i]);
-                //lbDiscount.Items.Add("-$" + ((Checkout.chosenItemsegularPrices[i] * Checkout.chosenItemsDiscounts[i]) / 100)* Checkout.chosenItemsAmount[i]);
+                lbDiscount.Items.Add("-$" + ((Checkout.chosenItemsegularPrices[i] * Checkout.chosenItemsDiscounts[i]) / 100) * Checkout.chosenItemsAmount[i]);
             }
 
             // Display total, with and without GST:
@@ -36,7 +36,7 @@ namespace TheComfortZone
         }
 
         private void btnClose_Click(object sender, EventArgs e)
-        { 
+        {
             // Add an event to close this form:
             this.Close();
         }

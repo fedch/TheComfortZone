@@ -90,7 +90,7 @@ namespace TheComfortZone
                 if (login.a == U.saleslogin && login.b == U.salespass || login.a == U.adminlogin && login.b == U.adminpass)
                 {
 
-                    Checkout f3 = new Checkout();
+                    Checkout f3 = new Checkout(ListItemsFinal);
 
                     f3.Show();
                 }
