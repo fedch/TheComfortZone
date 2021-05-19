@@ -87,18 +87,18 @@ namespace TheComfortZone
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(310, 112);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(59, 25);
+            this.lblDate.Size = new System.Drawing.Size(49, 25);
             this.lblDate.TabIndex = 3;
-            this.lblDate.Text = "label4";
+            this.lblDate.Text = "Date";
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Location = new System.Drawing.Point(528, 112);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(59, 25);
+            this.lblTime.Size = new System.Drawing.Size(50, 25);
             this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "label5";
+            this.lblTime.Text = "Time";
             // 
             // lbProducts
             // 

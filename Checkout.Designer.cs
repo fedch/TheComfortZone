@@ -171,9 +171,9 @@ namespace TheComfortZone
             this.lblTotal2.AutoSize = true;
             this.lblTotal2.Location = new System.Drawing.Point(518, 313);
             this.lblTotal2.Name = "lblTotal2";
-            this.lblTotal2.Size = new System.Drawing.Size(52, 25);
+            this.lblTotal2.Size = new System.Drawing.Size(22, 25);
             this.lblTotal2.TabIndex = 15;
-            this.lblTotal2.Text = "none";
+            this.lblTotal2.Text = "0";
             // 
             // lblPrice1
             // 

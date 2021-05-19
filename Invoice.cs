@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace TheComfortZone
@@ -19,7 +14,7 @@ namespace TheComfortZone
         {
             // Show current date and time:
             lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            lblTime.Text = DateTime.Now.ToString("h:mm tt");
+            lblTime.Text = DateTime.Now.ToString("h:mm:ss tt");
 
             // Display all added products and corresponding information
             for (int i = 0; i < Checkout.chosenItemsNames.Count; i++)
@@ -28,21 +23,21 @@ namespace TheComfortZone
                 lbQty.Items.Add(Checkout.chosenItemsAmount[i]);
                 lbPrice.Items.Add("$" + Checkout.chosenItemsegularPrices[i]);
                 lbTotal.Items.Add("$" + Checkout.chosenItemsegularPrices[i] * Checkout.chosenItemsAmount[i]);
-                lbDiscount.Items.Add("-$" + ((Checkout.chosenItemsegularPrices[i] * Checkout.discounts[i]) / 100)* Checkout.chosenItemsAmount[i]);
+                lbDiscount.Items.Add("-$" + ((Checkout.chosenItemsegularPrices[i] * Checkout.chosenItemsDiscounts[i]) / 100)* Checkout.chosenItemsAmount[i]);
             }
 
             // Display total, with and without GST:
             lblBalDue.Text = "$" + Checkout.chosenItemsTotalPrice.ToString();
             decimal gst = Math.Round((Checkout.chosenItemsTotalPrice * 3 / 23), 2);
-            lblSubTotalNum.Text = "$" + (Checkout.chosenItemsTotalPrice - gst).ToString();
-            lblGSTNum.Text = "$" + gst.ToString();
+            lblSubTotalNum.Text = "$" + Math.Round((Checkout.chosenItemsTotalPrice - gst), 2).ToString();
+            lblGSTNum.Text = "$" + Math.Round((gst), 2).ToString();
 
-            lblTotalFinalNum.Text = Checkout.chosenItemsTotalPrice.ToString();
+            lblTotalFinalNum.Text = "$" + Math.Round((Checkout.chosenItemsTotalPrice), 2).ToString();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
-        {
-            // Add event to close this form:
+        { 
+            // Add an event to close this form:
             this.Close();
         }
     }
