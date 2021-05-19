@@ -21,6 +21,9 @@ namespace TheComfortZone
         public Checkout()
         {            
             InitializeComponent();
+            // Disable the Add to cart and Payment Confirmed buttons:
+            btnToCart.Enabled = false;
+            btnPayment.Enabled = false;
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -35,6 +38,8 @@ namespace TheComfortZone
                 // Find if the ID provided by the user matches an ID in the inventory:
                 if (item.code == productIDProvided)
                 {
+                    // Enable the Add to Cart button:
+                    btnToCart.Enabled = true;
                     // Find the corresponding index:
                     index = ListItems.IndexOf(item);
                     // When that index matches indeces of the items in ListItems, display those items in the form: 
@@ -57,6 +62,7 @@ namespace TheComfortZone
                     {
                         MessageBox.Show("Wrong ID. Product not found");
                         txtBxProdID.Text = "0";
+                        btnToCart.Enabled = false;
                     }
                 }
             }            
@@ -67,6 +73,7 @@ namespace TheComfortZone
             // Make sure the user provides the right ID, amount and the product is not a duplicate
             if (txtBxProdID.Text != "0"  && txtBxProdID.Text != "" && nuUpDownAmount.Value != 0 && !lBoxIDs.Items.Contains(productIDProvided))
             {
+                btnPayment.Enabled = true;
                 // Add item codes to the list box:
                 lBoxIDs.Items.Add(productIDProvided);
                 // Save item codes in a new list:
@@ -113,6 +120,9 @@ namespace TheComfortZone
             for (int n = lBoxAmounts.Items.Count - 1; n >= 0; --n)
                 lBoxAmounts.Items.RemoveAt(n);
             lblTotal2.Text = "";
+
+            btnToCart.Enabled = false;
+            btnPayment.Enabled = false;
 
             // Reset all lists and totals, which will go to the invoice form, to empty or zero:
             chosenItemsNames.Clear();
