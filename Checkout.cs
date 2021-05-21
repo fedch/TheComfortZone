@@ -48,7 +48,7 @@ namespace TheComfortZone
                     index = ListItems.IndexOf(item);
                     // When that index matches indeces of the items in ListItems, display those items in the form: 
                     if (ListItems.IndexOf(item) == index)
-                    {
+                    {                        
                         lblProdNameAct.Text = item.productName;
                         nuUpDownAmount.Maximum = item.stockLeft;
                         txtBoxPrice.Text = "$" + Math.Round((item.price), 2).ToString();
@@ -77,6 +77,7 @@ namespace TheComfortZone
             // Make sure the user provides the right ID, amount and the product is not a duplicate
             if (txtBxProdID.Text != "0" && txtBxProdID.Text != "" && nuUpDownAmount.Value != 0 && !lBoxIDs.Items.Contains(productIDProvided))
             {
+                ChangeAmountsInFile(txtBxProdID.Text, nuUpDownAmount.Text);
                 btnPayment.Enabled = true;
                 // Add item codes to the list box:
                 lBoxIDs.Items.Add(productIDProvided);
@@ -134,6 +135,45 @@ namespace TheComfortZone
             chosenItemsegularPrices.Clear();
             chosenItemsDiscounts.Clear();
             chosenItemsTotalPrice = 0;
+        }
+
+        public static void ChangeAmountsInFile(string ID, string newQty)
+        {
+            List<string> itemsEditedAmounts = new List<string>();
+
+            string text = File.ReadAllText(@"items1.txt");
+            using (StringReader reader = new StringReader(text))
+            {
+                string line = reader.ReadLine();
+            }
+            string[] text1 = text.Split(Environment.NewLine.ToCharArray());
+
+            File.WriteAllText(@"items1.txt", string.Empty);
+
+            foreach (var i in text1)
+            {
+                if (i.Contains(ID))
+                {
+                    string[] items = i.Split('|');
+                    int temp = Convert.ToInt32(items[2]) - Convert.ToInt32(newQty);
+                    items[2] = temp.ToString();
+                    string newString = string.Join("|", items);
+                    itemsEditedAmounts.Add(newString);
+                    //sw.WriteLine(newString);
+                }
+                else if (i != "")
+                {
+                    itemsEditedAmounts.Add(i);
+                }
+            }
+
+            using (StreamWriter sw = File.AppendText(@"items1.txt"))
+            {
+                foreach (var i in itemsEditedAmounts)
+                {
+                    sw.WriteLine(i);
+                }
+            }
         }
 
     }
