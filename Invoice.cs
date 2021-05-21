@@ -28,9 +28,8 @@ namespace TheComfortZone
 
             // Display total, with and without GST:
             lblBalDue.Text = "$" + Checkout.chosenItemsTotalPrice.ToString();
-            decimal gst = Math.Round((Checkout.chosenItemsTotalPrice * 3 / 23), 2);
-            lblSubTotalNum.Text = "$" + Math.Round((Checkout.chosenItemsTotalPrice - gst), 2).ToString();
-            lblGSTNum.Text = "$" + Math.Round((gst), 2).ToString();
+            lblSubTotalNum.Text = "$" + Math.Round((Checkout.chosenItemsTotalPrice - Checkout.gst), 2).ToString();
+            lblGSTNum.Text = "$" + Math.Round((Checkout.gst), 2).ToString();
 
             lblTotalFinalNum.Text = "$" + Math.Round((Checkout.chosenItemsTotalPrice), 2).ToString();
         }
