@@ -9,7 +9,6 @@ namespace TheComfortZone
     {
         public static string productIDProvided;
         public static double discountAppl;
-        int index;
         public static decimal gst = 0;
         public decimal discountedPrice;
         public static List<string> chosenItemsNames = new List<string>();
@@ -44,7 +43,7 @@ namespace TheComfortZone
                     // Enable the Add to Cart button:
                     btnToCart.Enabled = true;
                     // Find the corresponding index:
-                    index = ListItems.IndexOf(item);
+                    int index = ListItems.IndexOf(item);
                     // When that index matches indeces of the items in ListItems, display those items in the form: 
                     if (ListItems.IndexOf(item) == index)
                     {                        
