@@ -4,4 +4,4 @@ Casual Sandal|30114|8|Brown|50|20
 Ankle Boot|50123|14|Brown|180|30
 Ballet Flats|12360|20|Black|20|10
 Heels|12370|10|Nude|50|15
-Sneakers|12380|9|Pink|30|20
+Sneakers|12380|9|Pink|40|20

@@ -124,6 +124,7 @@ namespace TheComfortZone
             this.button2.TabIndex = 2;
             this.button2.Text = "Close and Save";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -293,8 +294,7 @@ namespace TheComfortZone
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBoxCode);
             this.Name = "Admin";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Admin_Load);
+            this.Text = "Admin Activities";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

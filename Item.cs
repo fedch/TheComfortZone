@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+//Made by Diana Vanessa Gonzalez (1618722)
 namespace TheComfortZone
 {
     public class Item
@@ -26,13 +28,7 @@ namespace TheComfortZone
             this.price = price;
             this.discount = discount; 
 
-
-
         }
-
-
-        //methods 
-
 
 
 

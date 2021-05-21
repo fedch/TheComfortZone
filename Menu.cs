@@ -20,7 +20,10 @@ namespace TheComfortZone
 
         public menu()
         {
+
             InitializeComponent();
+
+            //Reads the items file to create a list of items 
             using (StreamReader streamReader = new StreamReader(@"Items1.txt"))
             {
 
@@ -63,6 +66,7 @@ namespace TheComfortZone
                 if (login.a == U.adminlogin && login.b == U.adminpass)
                 {
 
+                    //creates an admin with the list readed as the parameter
                     Admin f2 = new Admin(ListItemsFinal);
 
                     f2.Show();
